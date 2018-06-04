@@ -10,6 +10,10 @@ import UIKit
 
 class SignupViewController: UIViewController {
 
+    @IBOutlet weak var usernameTextField: UITextField!
+    @IBOutlet weak var passwordTextField: UITextField!
+    @IBOutlet weak var confirmPasswordTextField: UITextField!
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -46,5 +50,50 @@ class SignupViewController: UIViewController {
         // Typecast (ép kiêu) : Int(giá tri cần ép kiểu)
         // self.label.text = Int()
     }
+
+    @IBAction func didTapSignupBtn(_ sender: UIButton) {
+
+        // 1. Username hoặc password > 0
+        if usernameTextField.text?.count == 0 || passwordTextField.text?.count == 0 {
+            //
+            self.showAlert(title: "ABC", message: "Username hoặc password > 0")
+            return
+        }
+
+        // 2 Username khong đc có ký tự đặc biệt (#)
+        // if let
+        // guard let
+        if usernameTextField.text?.contains("#") ?? false {
+            //
+            self.showAlert(title: "ABC", message: "Username khong đc có ký tự đặc biệt (#)")
+            return
+        }
+
+        // 3 Password.count > 6
+        if passwordTextField.text?.count ?? 0 < 6 {
+            //
+            self.showAlert(title: "ABC", message: "Password.count > 6")
+            return
+        }
+
+        // 4 ConfirmPassword == password
+        if passwordTextField.text != confirmPasswordTextField.text {
+            self.showAlert(title: "ABC", message: "ConfirmPassword == password")
+            return
+        }
+
+        // Input valid (giá trị hợp lệ)
+
+    }
+
+    func showAlert(title: String?, message: String?) {
+        let alertController = UIAlertController(title: title, message: message, preferredStyle: .alert)
+        let alertAction = UIAlertAction(title: "Cacncel", style: .cancel, handler: nil)
+
+        alertController.addAction(alertAction)
+
+        self.present(alertController, animated: true, completion: nil)
+    }
+
 
 }
