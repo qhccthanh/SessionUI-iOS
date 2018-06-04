@@ -14,15 +14,18 @@ class SignupViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var confirmPasswordTextField: UITextField!
 
+    var userTapBack: String?
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
     }
 
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+
+    override func viewWillAppear(_ animated: Bool) {
+
+        // sakdjasdkdasdsa
     }
 
     @IBAction func backAction(_ sender: Any) {
@@ -84,6 +87,18 @@ class SignupViewController: UIViewController {
 
         // Input valid (giá trị hợp lệ)
 
+        // 4 tạo viewcontroller cần truyền dữ liệu
+        guard let userProfileController = self.storyboard?.instantiateViewController(withIdentifier: "UserProfileViewController") as? UserProfileViewController else {
+            return
+        }
+
+        // 5 gán dữ liệu vào biến
+        userProfileController.username = usernameTextField.text
+        userProfileController.password = passwordTextField.text
+        userProfileController.confirmPassword = confirmPasswordTextField.text
+        userProfileController.signUpViewController = self
+        // 6 Show viewcontroller lên
+        self.present(userProfileController, animated: true, completion: nil)
     }
 
     func showAlert(title: String?, message: String?) {

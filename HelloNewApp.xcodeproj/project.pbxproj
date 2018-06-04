@@ -13,6 +13,11 @@
 		F49FF28D20BA4C9A006184C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49FF28B20BA4C9A006184C6 /* Main.storyboard */; };
 		F49FF28F20BA4C9B006184C6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F49FF28E20BA4C9B006184C6 /* Assets.xcassets */; };
 		F49FF29220BA4C9B006184C6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49FF29020BA4C9B006184C6 /* LaunchScreen.storyboard */; };
+		F4ABF2FF20C566C8005C5262 /* HelloTextField.xib in Resources */ = {isa = PBXBuildFile; fileRef = F4ABF2FE20C566C8005C5262 /* HelloTextField.xib */; };
+		F4ABF30120C567DF005C5262 /* HelloTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABF30020C567DF005C5262 /* HelloTextField.swift */; };
+		F4ABF30320C56A66005C5262 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABF30220C56A66005C5262 /* UserProfileViewController.swift */; };
+		F4ABF30520C56F75005C5262 /* DemoTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABF30420C56F75005C5262 /* DemoTableViewController.swift */; };
+		F4ABF30720C574C4005C5262 /* NotificationTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4ABF30620C574C4005C5262 /* NotificationTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +29,11 @@
 		F49FF28E20BA4C9B006184C6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		F49FF29120BA4C9B006184C6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		F49FF29320BA4C9B006184C6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F4ABF2FE20C566C8005C5262 /* HelloTextField.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = HelloTextField.xib; sourceTree = "<group>"; };
+		F4ABF30020C567DF005C5262 /* HelloTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HelloTextField.swift; sourceTree = "<group>"; };
+		F4ABF30220C56A66005C5262 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		F4ABF30420C56F75005C5262 /* DemoTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoTableViewController.swift; sourceTree = "<group>"; };
+		F4ABF30620C574C4005C5262 /* NotificationTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -63,6 +73,11 @@
 				F49FF29020BA4C9B006184C6 /* LaunchScreen.storyboard */,
 				F49FF29320BA4C9B006184C6 /* Info.plist */,
 				F41C8D1320C39EE100619A4B /* SignupViewController.swift */,
+				F4ABF2FE20C566C8005C5262 /* HelloTextField.xib */,
+				F4ABF30020C567DF005C5262 /* HelloTextField.swift */,
+				F4ABF30220C56A66005C5262 /* UserProfileViewController.swift */,
+				F4ABF30420C56F75005C5262 /* DemoTableViewController.swift */,
+				F4ABF30620C574C4005C5262 /* NotificationTableViewCell.swift */,
 			);
 			path = HelloNewApp;
 			sourceTree = "<group>";
@@ -125,6 +140,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ABF2FF20C566C8005C5262 /* HelloTextField.xib in Resources */,
 				F49FF29220BA4C9B006184C6 /* LaunchScreen.storyboard in Resources */,
 				F49FF28F20BA4C9B006184C6 /* Assets.xcassets in Resources */,
 				F49FF28D20BA4C9A006184C6 /* Main.storyboard in Resources */,
@@ -138,6 +154,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F4ABF30720C574C4005C5262 /* NotificationTableViewCell.swift in Sources */,
+				F4ABF30120C567DF005C5262 /* HelloTextField.swift in Sources */,
+				F4ABF30320C56A66005C5262 /* UserProfileViewController.swift in Sources */,
+				F4ABF30520C56F75005C5262 /* DemoTableViewController.swift in Sources */,
 				F41C8D1420C39EE100619A4B /* SignupViewController.swift in Sources */,
 				F49FF28A20BA4C9A006184C6 /* ViewController.swift in Sources */,
 				F49FF28820BA4C9A006184C6 /* AppDelegate.swift in Sources */,
