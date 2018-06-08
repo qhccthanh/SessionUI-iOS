@@ -8,6 +8,9 @@
 
 /* Begin PBXBuildFile section */
 		F41C8D1420C39EE100619A4B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C8D1320C39EE100619A4B /* SignupViewController.swift */; };
+		F4820DEC20CAB26900629377 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DEB20CAB26900629377 /* UserInfo.swift */; };
+		F4820DEE20CAB5C500629377 /* ListUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DED20CAB5C500629377 /* ListUserViewController.swift */; };
+		F4820DF020CAB5D300629377 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */; };
 		F49FF28820BA4C9A006184C6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FF28720BA4C9A006184C6 /* AppDelegate.swift */; };
 		F49FF28A20BA4C9A006184C6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F49FF28920BA4C9A006184C6 /* ViewController.swift */; };
 		F49FF28D20BA4C9A006184C6 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F49FF28B20BA4C9A006184C6 /* Main.storyboard */; };
@@ -22,6 +25,9 @@
 
 /* Begin PBXFileReference section */
 		F41C8D1320C39EE100619A4B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F4820DEB20CAB26900629377 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
+		F4820DED20CAB5C500629377 /* ListUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserViewController.swift; sourceTree = "<group>"; };
+		F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
 		F49FF28420BA4C9A006184C6 /* HelloNewApp.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = HelloNewApp.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		F49FF28720BA4C9A006184C6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		F49FF28920BA4C9A006184C6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -78,6 +84,9 @@
 				F4ABF30220C56A66005C5262 /* UserProfileViewController.swift */,
 				F4ABF30420C56F75005C5262 /* DemoTableViewController.swift */,
 				F4ABF30620C574C4005C5262 /* NotificationTableViewCell.swift */,
+				F4820DEB20CAB26900629377 /* UserInfo.swift */,
+				F4820DED20CAB5C500629377 /* ListUserViewController.swift */,
+				F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */,
 			);
 			path = HelloNewApp;
 			sourceTree = "<group>";
@@ -158,7 +167,10 @@
 				F4ABF30120C567DF005C5262 /* HelloTextField.swift in Sources */,
 				F4ABF30320C56A66005C5262 /* UserProfileViewController.swift in Sources */,
 				F4ABF30520C56F75005C5262 /* DemoTableViewController.swift in Sources */,
+				F4820DEC20CAB26900629377 /* UserInfo.swift in Sources */,
 				F41C8D1420C39EE100619A4B /* SignupViewController.swift in Sources */,
+				F4820DF020CAB5D300629377 /* UserDetailViewController.swift in Sources */,
+				F4820DEE20CAB5C500629377 /* ListUserViewController.swift in Sources */,
 				F49FF28A20BA4C9A006184C6 /* ViewController.swift in Sources */,
 				F49FF28820BA4C9A006184C6 /* AppDelegate.swift in Sources */,
 			);

@@ -41,7 +41,6 @@ extension DemoTableViewController: UITableViewDataSource {
 //        cell.titleLabel.text = result
 //
 //        return cell
-
         // Row usernamename
         let cell = UITableViewCell(style: .value1, reuseIdentifier: "abc")
         switch indexPath.row {

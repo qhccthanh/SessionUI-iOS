@@ -19,6 +19,9 @@ class LoginViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+//        UserDefaults.standard.set("Toi di hoc", forKey: "toidihoc")
+//        print(UserDefaults.standard.string(forKey: "toidihoc"))
+
         let tapGesture = UITapGestureRecognizer(target: self, action: #selector(tapSignUpGesture(_:)))
         self.signupLabel.addGestureRecognizer(tapGesture)
         self.signupLabel.isUserInteractionEnabled = true // UIView, UILabel, UImageView, ...
@@ -59,6 +62,23 @@ class LoginViewController: UIViewController {
 
         let username = "iMIC2018"
         let password = "123456"
+
+        var userInfoDangTim: UserInfo?
+        listUsers.forEach { (userInfo ) in
+            if userInfo.username == self.usernameTextField.text && userInfo.password == self.passwordTextField.text {
+                userInfoDangTim = userInfo
+            }
+        }
+
+        if let userInfo = userInfoDangTim {
+            let alertController = UIAlertController(title: "Login", message: "Ban da dang nhap thanh cong voi username: \(userInfo.username) password: \(userInfo.password)", preferredStyle: .alert)
+            let cancelAction = UIAlertAction(title: "Không muốn", style: .cancel) { (_) in
+                print("Cancel")
+            }
+            alertController.addAction(cancelAction)
+            self.present(alertController, animated: true, completion: nil)
+            return
+        }
 
         if self.usernameTextField.text == username && self.passwordTextField.text == password {
             let alertController = UIAlertController(title: "Login", message: "Bạn có muốn login không?", preferredStyle: .alert)

@@ -29,6 +29,8 @@ class UserProfileViewController: UIViewController {
         usernameLabel.text = username
         passwordLabel.text = password
         confirmPasswordLabel.text = confirmPassword
+
+        
     }
 
     override func viewWillDisappear(_ animated: Bool) {
@@ -42,6 +44,14 @@ class UserProfileViewController: UIViewController {
 
     func backAction() {
         self.signUpViewController?.userTapBack = "absdsfdsf"
+    }
+
+}
+
+extension UIViewController {
+
+    @IBAction func backRootAction(_ sender: Any!) {
+        self.dismiss(animated: true, completion: nil)
     }
 
 }

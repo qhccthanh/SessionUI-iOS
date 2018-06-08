@@ -93,12 +93,24 @@ class SignupViewController: UIViewController {
         }
 
         // 5 gán dữ liệu vào biến
-        userProfileController.username = usernameTextField.text
-        userProfileController.password = passwordTextField.text
-        userProfileController.confirmPassword = confirmPasswordTextField.text
-        userProfileController.signUpViewController = self
-        // 6 Show viewcontroller lên
-        self.present(userProfileController, animated: true, completion: nil)
+        let userInfo = UserInfo()
+        userInfo.username = usernameTextField.text ?? ""
+        userInfo.password = passwordTextField.text ?? ""
+        userInfo.gender = 10
+        userInfo.age = 20
+
+        listUsers.append(userInfo)
+//        UserDefaults.standard.set(listUsers, forKey: "listUsers")
+
+        // 5 Luu lai thong tin
+        insertItems()
+
+//        userProfileController.username = usernameTextField.text
+//        userProfileController.password = passwordTextField.text
+//        userProfileController.confirmPassword = confirmPasswordTextField.text
+//        userProfileController.signUpViewController = self
+//        // 6 Show viewcontroller lên
+//        self.present(userProfileController, animated: true, completion: nil)
     }
 
     func showAlert(title: String?, message: String?) {
