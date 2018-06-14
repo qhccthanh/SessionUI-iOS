@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		F41C8D1420C39EE100619A4B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C8D1320C39EE100619A4B /* SignupViewController.swift */; };
+		F454601720CE9FD200793937 /* DemoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454601620CE9FD200793937 /* DemoCollectionViewController.swift */; };
 		F4820DEC20CAB26900629377 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DEB20CAB26900629377 /* UserInfo.swift */; };
 		F4820DEE20CAB5C500629377 /* ListUserViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DED20CAB5C500629377 /* ListUserViewController.swift */; };
 		F4820DF020CAB5D300629377 /* UserDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */; };
@@ -25,6 +26,7 @@
 
 /* Begin PBXFileReference section */
 		F41C8D1320C39EE100619A4B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
+		F454601620CE9FD200793937 /* DemoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewController.swift; sourceTree = "<group>"; };
 		F4820DEB20CAB26900629377 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
 		F4820DED20CAB5C500629377 /* ListUserViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListUserViewController.swift; sourceTree = "<group>"; };
 		F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDetailViewController.swift; sourceTree = "<group>"; };
@@ -87,6 +89,7 @@
 				F4820DEB20CAB26900629377 /* UserInfo.swift */,
 				F4820DED20CAB5C500629377 /* ListUserViewController.swift */,
 				F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */,
+				F454601620CE9FD200793937 /* DemoCollectionViewController.swift */,
 			);
 			path = HelloNewApp;
 			sourceTree = "<group>";
@@ -170,6 +173,7 @@
 				F4820DEC20CAB26900629377 /* UserInfo.swift in Sources */,
 				F41C8D1420C39EE100619A4B /* SignupViewController.swift in Sources */,
 				F4820DF020CAB5D300629377 /* UserDetailViewController.swift in Sources */,
+				F454601720CE9FD200793937 /* DemoCollectionViewController.swift in Sources */,
 				F4820DEE20CAB5C500629377 /* ListUserViewController.swift in Sources */,
 				F49FF28A20BA4C9A006184C6 /* ViewController.swift in Sources */,
 				F49FF28820BA4C9A006184C6 /* AppDelegate.swift in Sources */,

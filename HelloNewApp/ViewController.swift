@@ -35,6 +35,14 @@ class LoginViewController: UIViewController {
         self.titleLabel.isUserInteractionEnabled = true
     }
 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+
+        self.navigationController?.setNavigationBarHidden(true, animated: false)
+    }
+
+    
+
     @objc func tapTitleGesture(_ gesture: UIGestureRecognizer) {
 
     }
@@ -46,7 +54,8 @@ class LoginViewController: UIViewController {
 
         // Cách 1 if let
         if let controller = self.storyboard?.instantiateViewController(withIdentifier: "SignupViewController") {
-            self.present(controller, animated: true, completion: nil)
+//            self.present(controller, animated: true, completion: nil)
+            self.navigationController?.pushViewController(controller, animated: true)
         }
 
         // Cách 2 guard

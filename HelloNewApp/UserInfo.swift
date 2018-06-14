@@ -62,7 +62,7 @@ class UserInfo: NSObject, NSCoding {
 // 1 Copy 2 hàm này
 func insertItems() {
     let defaults = UserDefaults.standard
-
+    // listUser => Data
     let data = NSKeyedArchiver.archivedData(withRootObject: listUsers)
     defaults.set(data, forKey: "listUsers")
 }
