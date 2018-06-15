@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		F414263820D3E7B60034D359 /* DemoJSONViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414263720D3E7B60034D359 /* DemoJSONViewController.swift */; };
+		F414263A20D3E80E0034D359 /* demo1.json in Resources */ = {isa = PBXBuildFile; fileRef = F414263920D3E80E0034D359 /* demo1.json */; };
+		F414263C20D3E82D0034D359 /* demojson.json in Resources */ = {isa = PBXBuildFile; fileRef = F414263B20D3E82D0034D359 /* demojson.json */; };
+		F414263E20D3EB3B0034D359 /* StudentInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414263D20D3EB3B0034D359 /* StudentInfo.swift */; };
+		F414264020D3ED350034D359 /* jsondemo.json in Resources */ = {isa = PBXBuildFile; fileRef = F414263F20D3ED350034D359 /* jsondemo.json */; };
+		F414264220D3F5E60034D359 /* StudentTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F414264120D3F5E60034D359 /* StudentTableViewCell.swift */; };
 		F41C8D1420C39EE100619A4B /* SignupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F41C8D1320C39EE100619A4B /* SignupViewController.swift */; };
 		F454601720CE9FD200793937 /* DemoCollectionViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F454601620CE9FD200793937 /* DemoCollectionViewController.swift */; };
 		F4820DEC20CAB26900629377 /* UserInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = F4820DEB20CAB26900629377 /* UserInfo.swift */; };
@@ -25,6 +31,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		F414263720D3E7B60034D359 /* DemoJSONViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoJSONViewController.swift; sourceTree = "<group>"; };
+		F414263920D3E80E0034D359 /* demo1.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demo1.json; sourceTree = "<group>"; };
+		F414263B20D3E82D0034D359 /* demojson.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = demojson.json; sourceTree = "<group>"; };
+		F414263D20D3EB3B0034D359 /* StudentInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentInfo.swift; sourceTree = "<group>"; };
+		F414263F20D3ED350034D359 /* jsondemo.json */ = {isa = PBXFileReference; lastKnownFileType = text.json; path = jsondemo.json; sourceTree = "<group>"; };
+		F414264120D3F5E60034D359 /* StudentTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudentTableViewCell.swift; sourceTree = "<group>"; };
 		F41C8D1320C39EE100619A4B /* SignupViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignupViewController.swift; sourceTree = "<group>"; };
 		F454601620CE9FD200793937 /* DemoCollectionViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DemoCollectionViewController.swift; sourceTree = "<group>"; };
 		F4820DEB20CAB26900629377 /* UserInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfo.swift; sourceTree = "<group>"; };
@@ -74,6 +86,8 @@
 		F49FF28620BA4C9A006184C6 /* HelloNewApp */ = {
 			isa = PBXGroup;
 			children = (
+				F414264120D3F5E60034D359 /* StudentTableViewCell.swift */,
+				F414263F20D3ED350034D359 /* jsondemo.json */,
 				F49FF28720BA4C9A006184C6 /* AppDelegate.swift */,
 				F49FF28920BA4C9A006184C6 /* ViewController.swift */,
 				F49FF28B20BA4C9A006184C6 /* Main.storyboard */,
@@ -90,6 +104,10 @@
 				F4820DED20CAB5C500629377 /* ListUserViewController.swift */,
 				F4820DEF20CAB5D300629377 /* UserDetailViewController.swift */,
 				F454601620CE9FD200793937 /* DemoCollectionViewController.swift */,
+				F414263720D3E7B60034D359 /* DemoJSONViewController.swift */,
+				F414263920D3E80E0034D359 /* demo1.json */,
+				F414263B20D3E82D0034D359 /* demojson.json */,
+				F414263D20D3EB3B0034D359 /* StudentInfo.swift */,
 			);
 			path = HelloNewApp;
 			sourceTree = "<group>";
@@ -152,9 +170,12 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				F414263C20D3E82D0034D359 /* demojson.json in Resources */,
 				F4ABF2FF20C566C8005C5262 /* HelloTextField.xib in Resources */,
+				F414264020D3ED350034D359 /* jsondemo.json in Resources */,
 				F49FF29220BA4C9B006184C6 /* LaunchScreen.storyboard in Resources */,
 				F49FF28F20BA4C9B006184C6 /* Assets.xcassets in Resources */,
+				F414263A20D3E80E0034D359 /* demo1.json in Resources */,
 				F49FF28D20BA4C9A006184C6 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -167,6 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				F4ABF30720C574C4005C5262 /* NotificationTableViewCell.swift in Sources */,
+				F414263820D3E7B60034D359 /* DemoJSONViewController.swift in Sources */,
 				F4ABF30120C567DF005C5262 /* HelloTextField.swift in Sources */,
 				F4ABF30320C56A66005C5262 /* UserProfileViewController.swift in Sources */,
 				F4ABF30520C56F75005C5262 /* DemoTableViewController.swift in Sources */,
@@ -175,6 +197,8 @@
 				F4820DF020CAB5D300629377 /* UserDetailViewController.swift in Sources */,
 				F454601720CE9FD200793937 /* DemoCollectionViewController.swift in Sources */,
 				F4820DEE20CAB5C500629377 /* ListUserViewController.swift in Sources */,
+				F414263E20D3EB3B0034D359 /* StudentInfo.swift in Sources */,
+				F414264220D3F5E60034D359 /* StudentTableViewCell.swift in Sources */,
 				F49FF28A20BA4C9A006184C6 /* ViewController.swift in Sources */,
 				F49FF28820BA4C9A006184C6 /* AppDelegate.swift in Sources */,
 			);
