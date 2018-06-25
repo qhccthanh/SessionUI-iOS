@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import SafariServices
 
 class DemoJSONViewController: UIViewController {
 
@@ -67,5 +68,18 @@ extension DemoJSONViewController: UITableViewDataSource, UITableViewDelegate {
         return cell!
     }
 
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        let url = URL(string: "https://www.google.com.vn/")!
+        if !UIApplication.shared.canOpenURL(url) {
+            return
+        }
+
+        if #available(iOS 9.0, *) {
+            let safari = SFSafariViewController(url: url)
+            self.present(safari, animated: true, completion: nil)
+        } else {
+            UIApplication.shared.openURL(url)
+        }
+    }
 }
 
