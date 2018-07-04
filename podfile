@@ -7,6 +7,9 @@ target 'HelloNewApp' do
  pod 'GoogleMaps'
   pod 'GooglePlaces'
   pod 'GooglePlacePicker'
+  pod 'SVProgressHUD'
+  pod 'FBSDKLoginKit'
   # Pods for HelloNewApp
+  pod 'GoogleSignIn'
 
 end

@@ -9,27 +9,40 @@
 import UIKit
 import GooglePlaces
 import GooglePlacePicker
+import SVProgressHUD
 
 class GooglePlaceViewController: UIViewController {
 
     var placesClient: GMSPlacesClient!
 
     // Add a pair of UILabels in Interface Builder, and connect the outlets to these variables.
-    @IBOutlet var nameLabel: UILabel!
-    @IBOutlet var addressLabel: UILabel!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var addressLabel: UILabel!
+    @IBOutlet weak var imageView: UIImageView!
+    @IBOutlet weak var attributionTextView: UITextView!
+
+
+
+    let locationManager = CLLocationManager()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         placesClient = GMSPlacesClient.shared()
+        locationManager.requestWhenInUseAuthorization()
+        SVProgressHUD.setDefaultStyle(SVProgressHUDStyle.dark)
     }
 
     // Add a UIButton in Interface Builder, and connect the action to this function.
     @IBAction func getCurrentPlace(_ sender: UIButton) {
 
+//        SVProgressHUD.show()
 //        placesClient.currentPlace(callback: { (placeLikelihoodList, error) -> Void in
+//            SVProgressHUD.dismiss()
+//
 //            if let error = error {
 //                print("Pick Place error: \(error.localizedDescription)")
+//                SVProgressHUD.showError(withStatus: error.localizedDescription)
 //                return
 //            }
 //
@@ -45,8 +58,6 @@ class GooglePlaceViewController: UIViewController {
 //                }
 //            }
 //        })
-//        print("B")
-//        print("C")
         self.pickPlace(sender)
     }
 
@@ -65,14 +76,47 @@ class GooglePlaceViewController: UIViewController {
                 print("Pick Place error: \(error.localizedDescription)")
                 return
             }
-            
+
             if let place = place {
                 self.nameLabel.text = place.name
                 self.addressLabel.text = place.formattedAddress?.components(separatedBy: ", ")
                     .joined(separator: "\n")
+                self.loadFirstPhotoForPlace(placeID: place.placeID)
             } else {
                 self.nameLabel.text = "No place selected"
                 self.addressLabel.text = ""
+            }
+        })
+    }
+
+    func loadFirstPhotoForPlace(placeID: String) {
+        SVProgressHUD.show()
+        GMSPlacesClient.shared().lookUpPhotos(forPlaceID: placeID) { (photos, error) -> Void in
+            SVProgressHUD.dismiss()
+            if let error = error {
+                // TODO: handle the error.
+                print("Error: \(error.localizedDescription)")
+                 SVProgressHUD.showError(withStatus: error.localizedDescription)
+            } else {
+                if let firstPhoto = photos?.results.first {
+                    self.loadImageForMetadata(photoMetadata: firstPhoto)
+                }
+            }
+        }
+    }
+
+    func loadImageForMetadata(photoMetadata: GMSPlacePhotoMetadata) {
+        SVProgressHUD.show()
+        GMSPlacesClient.shared().loadPlacePhoto(photoMetadata, callback: {
+            (photo, error) -> Void in
+            SVProgressHUD.dismiss()
+            if let error = error {
+                // TODO: handle the error.
+                print("Error: \(error.localizedDescription)")
+                SVProgressHUD.showError(withStatus: error.localizedDescription)
+            } else {
+                self.imageView.image = photo;
+                self.attributionTextView.attributedText = photoMetadata.attributions;
             }
         })
     }
